@@ -1,0 +1,36 @@
+/* Ajoutez une marge à gauche et à droite pour centrer le contenu */
+.container {
+    margin: 0 auto;
+    max-width: 960px;
+}
+
+/* Ajoutez une ombre légère pour donner de la profondeur */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin-top:  50px;
+    margin-left: 30px;
+    width: 230px;
+    border-radius: 5px;
+}
+
+
+/* Ajoutez une couleur de fond pour le titre */
+h1 {
+    background-color: #f2f2f2;
+    padding: 10px;
+}
+
+/* Ajoutez une couleur de fond pour les boutons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Ajoutez une couleur de survol pour les boutons */
+button:hover {
+    background-color: #3e8e41;
+}

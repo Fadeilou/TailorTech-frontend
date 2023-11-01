@@ -1,0 +1,24 @@
+<div class="product-container">
+    <div class="product-view">
+        <img class="product-image" [src]="modele.image" alt="Image du modèle">
+        <div class="fabric-selector">
+            <div class="fabric" *ngFor="let tissu of tissus">
+                <input type="radio" id="fabric-{{ tissu.id }}" name="tissu" [value]="tissu.id" [(ngModel)]="selectedTissu">
+                <label for="fabric-{{ tissu.id }}">
+                    <img [src]="tissu.image" alt="Tissu {{ tissu.nom }}"><br>
+                    <span class="fabric-name">{{ tissu.nom }}</span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="product-details">
+        <h2 class="product-title">{{ modele.nom }}</h2>
+        <h3 class="product-type">{{ modele.type }}</h3>
+        <p class="product-occasion">{{ modele.occasion }}</p>
+        <div class="product-price">${{ modele.prix }}</div>
+        <div class="actions">
+            <button class="action-btn primary" (click)="ajouterAuPanier()">Add Card</button>
+    
+        </div>
+    </div>
+</div>

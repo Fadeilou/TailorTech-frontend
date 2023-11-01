@@ -1,0 +1,12 @@
+.icon-large {
+    font-size: 20px; /* Adjust the size as needed */
+}
+
+.custom-nav-height {
+    height: 80px; /* or any other height you find suitable */
+    line-height: 80px; /* this will vertically center the text/links */
+}
+
+.main-nav.nav li a {
+    vertical-align: middle;
+}

@@ -1,0 +1,123 @@
+<div class="container">
+  <div class="row">
+    <!-- Filter section -->
+    <div class="col-md-3">
+      <h5>Filters</h5>
+      <hr>
+
+      <!-- Filter for type -->
+      <h6>Type</h6>
+      <div *ngFor="let type of types">
+        <input type="checkbox" [(ngModel)]="type.checked" (change)="filter()" />
+        {{ type.name }}
+      </div>
+      <hr>
+
+      <!-- Filter for occasion -->
+      <h6>Occasion</h6>
+      <div *ngFor="let occasion of occasions">
+        <input type="checkbox" [(ngModel)]="occasion.checked" (change)="filter()" />
+        {{ occasion.name }}
+      </div>
+      <hr>
+
+      <!-- Filter for style -->
+      <h6>Style</h6>
+      <div *ngFor="let style of styles">
+        <input type="checkbox" [(ngModel)]="style.checked" (change)="filter()" />
+        {{ style.name }}
+      </div>
+      <hr>
+
+      <!-- Filter for length -->
+      <h6>Length</h6>
+      <div *ngFor="let length of lengths">
+        <input type="checkbox" [(ngModel)]="length.checked" (change)="filter()" />
+        {{ length.name }}
+      </div>
+      <hr>
+
+      <!-- Filter for cut -->
+      <h6>Cut</h6>
+      <div *ngFor="let cut of cuts">
+        <input type="checkbox" [(ngModel)]="cut.checked" (change)="filter()" />
+        {{ cut.name }}
+      </div>
+      <hr>
+
+      <!-- Filter for neckline -->
+      <h6>Neckline</h6>
+      <div *ngFor="let neckline of necklines">
+        <input type="checkbox" [(ngModel)]="neckline.checked" (change)="filter()" />
+        {{ neckline.name }}
+      </div>
+      <hr>
+
+      <!-- Filter for sleeves -->
+      <h6>Sleeves</h6>
+      <div *ngFor="let sleeve of sleeves">
+        <input type="checkbox" [(ngModel)]="sleeve.checked" (change)="filter()" />
+        {{ sleeve.name }}
+      </div>
+      <hr>
+
+      <!-- Filter for pattern -->
+      <h6>Pattern</h6>
+      <div *ngFor="let pattern of patterns">
+        <input type="checkbox" [(ngModel)]="pattern.checked" (change)="filter()" />
+        {{ pattern.name }}
+      </div>
+      <hr>
+
+      <!-- Filter for decorations -->
+      <h6>Decorations</h6>
+      <div *ngFor="let decoration of decorations">
+        <input type="checkbox" [(ngModel)]="decoration.checked" (change)="filter()" />
+        {{ decoration.name }}
+      </div>
+      <hr>
+
+      <!-- Filter for closure -->
+      <h6>Closure</h6>
+      <div *ngFor="let closure of closures">
+        <input type="checkbox" [(ngModel)]="closure.checked" (change)="filter()" />
+        {{ closure.name }}
+      </div>
+      <hr>
+
+      <!-- Filter for pockets -->
+      <h6>Pockets</h6>
+      <div *ngFor="let pocket of pockets">
+        <input type="checkbox" [(ngModel)]="pocket.checked" (change)="filter()" />
+        {{ pocket.name }}
+      </div>
+      <hr>
+
+      <!-- Filter for season -->
+      <h6>Season</h6>
+      <div *ngFor="let season of seasons">
+        <input type="checkbox" [(ngModel)]="season.checked" (change)="filter()" />
+        {{ season.name }}
+      </div>
+      <hr>
+
+    </div>
+
+    <!-- Display section for models -->
+    <div class="col-md-9">
+      <div class="row">
+        <div class="col-md-4" *ngFor="let model of filteredModels">
+          <div class="card">
+            <img class="card-img-top" [src]="model.image" alt="Model image">
+            <div class="card-body text-center">
+              <h5 class="card-title">{{ model.name }}</h5>
+              <h6 class="card-title">{{ model.type }}</h6>
+              <h6 class="card-title">{{ model.occasion }}</h6>
+              <!-- Other model details -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
